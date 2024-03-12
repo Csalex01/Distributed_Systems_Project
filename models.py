@@ -1,10 +1,7 @@
 from . import db
 from flask_login import UserMixin
-from sqlalchemy.sql import func
 
 # Model for Users
-
-
 class Users(db.Model, UserMixin):
     UserID = db.Column(db.Integer, primary_key=True, autoincrement=True)
     Email = db.Column(db.String(100), unique=True, nullable=False)
@@ -17,8 +14,9 @@ class Users(db.Model, UserMixin):
         return self.UserID
 
 # Model for Votes
-
-class EnrolledStudents(db.Model):
-    UserID = db.Column(db.Integer, primary_key=True)
-    CourseID = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    Vote = db.Column(db.Boolean, default=False) # The idea is that if the vote is White/Gold then the Vote is True and for Blue/Black False
+class Votes(db.Model):
+    VoteID = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    UserID = db.Column(db.Integer, nullable=False)
+    WhiteGold = db.Column(db.Boolean, nullable=False, default=False)
+    BlueBlack = db.Column(db.Boolean, nullable=False, default=False)
+    Other = db.Column(db.String, nullable=False, default="")

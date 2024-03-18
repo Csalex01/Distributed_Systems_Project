@@ -147,19 +147,19 @@ def menu():
     while True:
 
         print(f"\n{COLORS.OKCYAN}*--------* DS_Vote Database TUI *--------*{COLORS.RESET}")
-        print(f"{COLORS.WARNING}*-----------* LOG *-----------*{COLORS.RESET}")
+        print(f"{COLORS.WARNING}*-------------* LOG *--------------*{COLORS.RESET}")
         print(f"{COLORS.OKGREEN}1.){COLORS.RESET} Print Users")
         print(f"{COLORS.OKGREEN}2.){COLORS.RESET} Print Votes")
-        print(f"{COLORS.WARNING}*-----* Add to Database *-----*{COLORS.RESET}")
+        print(f"{COLORS.WARNING}*-------* Add to Database *--------*{COLORS.RESET}")
         print(f"{COLORS.OKGREEN}3.){COLORS.RESET} Sign Up User")
         print(f"{COLORS.OKGREEN}4.){COLORS.RESET} Create Vote")
         print(f"{COLORS.OKGREEN}5.){COLORS.RESET} Update Vote")
         print(f"{COLORS.WARNING}*-----* Delete from Database *-----*{COLORS.RESET}")
         print(f"{COLORS.OKGREEN}6.){COLORS.RESET} Delete User")
         print(f"{COLORS.OKGREEN}7.){COLORS.RESET} Delete Vote")
-        print(f"{COLORS.WARNING}*-----------------------------*{COLORS.RESET}")
-        print(f"{COLORS.OKGREEN}0.){COLORS.RESET} Exit")
-        print(f"{COLORS.OKCYAN}*--------------------------------------------------*{COLORS.RESET}")
+        print(f"{COLORS.WARNING}*----------------------------------*{COLORS.RESET}")
+        print(f"{COLORS.FAIL}0.){COLORS.RESET} Exit")
+        print(f"{COLORS.OKCYAN}*------------------------------------------*{COLORS.RESET}")
 
         try:
             choice = int(input(f"{COLORS.OKGREEN}> Choice: {COLORS.OKCYAN}"))

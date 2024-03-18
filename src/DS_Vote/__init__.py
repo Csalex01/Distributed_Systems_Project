@@ -8,6 +8,7 @@ from os import path
 app = Flask(__name__)
 
 # Create database
+
 db = SQLAlchemy()
 DB_NAME = "votes.db"
 
@@ -17,6 +18,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{DB_NAME}"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
 
 # Register blueprints
+
 from DS_Vote.base import base
 
 app.register_blueprint(base, url_prefix="/")

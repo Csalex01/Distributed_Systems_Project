@@ -13,6 +13,8 @@ Command: `pip install -r requirements.txt`
 ```
 pip freeze > requirements.txt
 ```
+## Figma
+https://www.figma.com/file/nIzDKs8nGEq0m3GV6Ryvtg/Untitled?type=design&node-id=1%3A2&mode=design&t=efQb2YGrSMhzo6yb-1
 
 ## Front-end
 Bootstrap

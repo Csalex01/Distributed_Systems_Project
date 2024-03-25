@@ -1,17 +1,13 @@
-{% extends "base.html" %}
-
-Vote Page
-
-{% block content %}
-    <main>
-        <h2>What do you see?</h2>
-        <img src="../../static/The_dress_blueblackwhitegold.jpg" alt="WG or BB">
-        <form class="vote-form" action="{{ path('vote') }}" method="post">
-            <label for="wg">White Gold</label>
-            <input type="radio" id="wg" name="vote" value="wg">
-            <label for="bb">Black Blue</label>
-            <input type="radio" id="bb" name="vote" value="bb">
-            <input type="submit" value="Vote">
-        </form>
-    </main>
+{% extends "base.html" %} Vote Page {% block content %}
+<main>
+  <h2>What do you see?</h2>
+  <img src="../../static/The_dress_blueblackwhitegold.jpg" alt="WG or BB" />
+  <form class="vote-form" action="" method="post">
+    <label for="wg">White Gold</label>
+    <input type="radio" id="wg" name="vote" value="wg" />
+    <label for="bb">Black Blue</label>
+    <input type="radio" id="bb" name="vote" value="bb" />
+    <input type="submit" value="Vote" />
+  </form>
+</main>
 {% endblock %}

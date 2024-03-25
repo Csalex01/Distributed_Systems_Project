@@ -56,3 +56,56 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* vote page ================================= */
+
+.vote-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.vote-image {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vote-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.vote-wg-btn {
+    background-color: #cab376;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.vote-bb-btn {
+    background-color: #9dafdc;
+    color: #000000;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* result page ================================= */

@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.form-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+input, button {
+    margin: 5px 0;
+    padding: 10px;
+}
+.voting-section {
+    text-align: center;
+    margin-top: 20px;
+}
+.vote-btn {
+    margin: 10px;
+    padding: 10px 20px;
+}

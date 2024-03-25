@@ -5,7 +5,7 @@ from flask_login import LoginManager
 from os import path
 
 # Initialize app with the current package name
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static", template_folder="templates")
 
 # Create database
 

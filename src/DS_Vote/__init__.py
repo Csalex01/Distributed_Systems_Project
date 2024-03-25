@@ -44,4 +44,4 @@ login_manager.init_app(app)
 
 @login_manager.user_loader
 def load_user(id):
-    return User.query.get(int(id))
+    return Users.query.get(int(id))

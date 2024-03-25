@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class = "login-form">
+    <h2>Login</h2>
+<form method="POST" action="/login">
+    <!-- Assuming you'll fill these with Flask/Werkzeug -->
+    <input type="hidden" name="csrf_token" value="">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" value="Login">
+</form>
+<a href="{{ url_for('auth.register') }}">Don't have an account? Sign Up</a>
+</div>
+
+{% endblock %}

@@ -9,7 +9,3 @@ base = Blueprint("base", __name__)
 @base.route("/")
 def index():
     return render_template("index/home.html")
-
-@base.route("/vote")
-def vote():
-    return render_template("index/vote.html")

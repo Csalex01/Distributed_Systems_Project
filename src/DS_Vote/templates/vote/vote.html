@@ -5,9 +5,10 @@
         src="../../static/The_dress_blueblackwhitegold.jpg"
         alt="WG or BB"
     />
-    <form class="vote-form" action="" method="post">
-        <h2>What color is the dress?</h2>
-        <div class="vote-form-choices">
+    <form class="vote-form" action="/vote" method="post">
+        <!-- <h2>What color is the dress?</h2> -->
+
+        <!-- <div class="vote-form-choices">
             <label class="vote-wg-btn" for="wg">White Gold</label>
             <input
                 class="vote-selector"
@@ -16,6 +17,7 @@
                 name="vote"
                 value="wg"
             />
+
             <label class="vote-bb-btn" for="bb">Black Blue</label>
             <input
                 class="vote-selector"
@@ -25,7 +27,22 @@
                 value="bb"
             />
         </div>
-        <input type="submit" value="Vote" />
+        
+        <input type="submit" value="Vote" /> -->
+        {{ form.csrf_token }}
+        
+        <h2>{{ form.vote.label }}</h2>
+
+        {% for subfield in form.vote %}
+
+            <!-- <label class="vote-{{ subfield.data }}-btn" for="{{ subfield.id }}">{{ subfield.label }}</label> -->
+            {{ subfield.label(class="vote-" ~ subfield.data ~ "-btn") }}
+            <input class="vote-selector" type="radio" id="{{ subfield.id }}" name="vote" value="{{ subfield.data }}" />
+
+        {% endfor %}
+        
+        {{ form.submit() }}
+
     </form>
 </main>
 {% endblock %}

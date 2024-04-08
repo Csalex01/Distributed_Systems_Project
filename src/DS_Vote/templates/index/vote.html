@@ -1,0 +1,31 @@
+{% extends "base.html" %} Vote Page {% block content %}
+<main class="vote-main">
+    <img
+        class="vote-image"
+        src="../../static/The_dress_blueblackwhitegold.jpg"
+        alt="WG or BB"
+    />
+    <form class="vote-form" action="" method="post">
+        <h2>What color is the dress?</h2>
+        <div class="vote-form-choices">
+            <label class="vote-wg-btn" for="wg">White Gold</label>
+            <input
+                class="vote-selector"
+                type="radio"
+                id="wg"
+                name="vote"
+                value="wg"
+            />
+            <label class="vote-bb-btn" for="bb">Black Blue</label>
+            <input
+                class="vote-selector"
+                type="radio"
+                id="bb"
+                name="vote"
+                value="bb"
+            />
+        </div>
+        <input type="submit" value="Vote" />
+    </form>
+</main>
+{% endblock %}

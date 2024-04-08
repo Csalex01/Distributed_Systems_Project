@@ -5,13 +5,15 @@
 <div class = "login-form">
     <h2>Register</h2>
 <form method="POST" action="/register">
-    <!-- Assuming you'll fill these with Flask/Werkzeug -->
-    <input type="hidden" name="csrf_token" value="">
-    <input type="text" name="firstname" placeholder="First name" required>
-    <input type="text" name="lastname" placeholder="Last name" required>
-    <input type="email" name="email" placeholder="E-mail" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <input type="submit" value="Register">
+    {{ form.csrf_token }}
+    {{ form.first_name() }}
+    {{ form.last_name() }}
+    {{ form.email() }}
+    {{ form.password() }}
+    {{ form.submit() }}
+    {% for message in messages %}
+        <li>{{ message }}</li>
+    {% endfor %}
 </form>
 <a href="{{ url_for('auth.login') }}">Already have an account? Log in!</a>
 </div>

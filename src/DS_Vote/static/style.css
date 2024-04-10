@@ -118,3 +118,15 @@ input[type="radio"] {
 }
 
 /* result page ================================= */
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+#myChart {
+    max-width: 400px;
+}

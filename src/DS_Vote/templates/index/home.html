@@ -11,6 +11,20 @@
     endif %}
 </div>
 
-{% for message in messages %}
-<li>{{ message }}</li>
-{% endfor %} {% endblock %}
+{% block content %}
+    <div class="login-form">
+        <h1>Welcome to the WG/BB Voting System</h1>
+        
+        {% if current_user.is_authenticated %}
+            <a href="/vote">Vote</a>
+            <a href="/logout">Log out</a>
+        {% else %}
+            Please <a href="{{ url_for('auth.login') }}">log in</a> or <a href="{{ url_for('auth.register') }}">create an account</a> to vote.
+        {% endif %}
+    </div>
+
+    {% for message in messages %}
+        <li>{{ message }}</li>
+    {% endfor %}
+{% endblock %}
+

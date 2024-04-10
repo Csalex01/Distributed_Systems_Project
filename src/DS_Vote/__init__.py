@@ -21,9 +21,11 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
 
 from DS_Vote.base import base
 from DS_Vote.auth import auth
+from DS_Vote.vote import vote
 
 app.register_blueprint(base, url_prefix="/")
 app.register_blueprint(auth, url_prefix="/")
+app.register_blueprint(vote, url_prefix="/")
 
 # Initialize database
 

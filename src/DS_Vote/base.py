@@ -13,3 +13,7 @@ def index():
 @base.route("/vote")
 def vote():
     return render_template("index/vote.html")
+
+@base.route("/results")
+def results():
+    return render_template("index/results.html")

@@ -1,3 +1,18 @@
+<!--
+    This HTML template file is used for rendering the home page of the WG/BB Voting System.
+    It extends the "base.html" template.
+
+    The content of the home page is defined within the "content" block.
+
+    If the user is authenticated (logged in), it displays the following links:
+        - "Vote" link: Takes the user to the voting page.
+        - "Results" link: Takes the user to the results page.
+        - "Log out" link: Logs the user out of the system.
+
+    If the user is not authenticated (not logged in), it displays a message asking the user to either log in or create an account to vote.
+
+    This template is used to provide the user interface for the WG/BB Voting System.
+-->
 {% extends "base.html" %} 
 
 {% block content %}

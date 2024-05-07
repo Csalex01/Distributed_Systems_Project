@@ -1,6 +1,5 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
+<!-- This template displays the vote results using a pie chart. -->
 
 <div class="chart-container">
     <!-- include pie chart library -->
@@ -9,22 +8,24 @@
 </div>
 
 <script>
+    // Check if Chart.js library is loaded
     if (typeof Chart === "undefined") {
         console.log("Chart.js is not loaded");
     } else {
         console.log("Chart.js is loaded");
     }
 
+    // Get the vote data from the cookie and format it
     data = document.cookie
         .replace("\\054", ",")
         .replace("data=", "")
         .replace("[", "")
         .replace("]", "")
-        .replace("\"", "")
-        
-    data = data.replace(data.charAt(data.length - 1), "").split(",")
+        .replace('"', "");
 
+    data = data.replace(data.charAt(data.length - 1), "").split(",");
 
+    // Create a pie chart using Chart.js
     const ctx = document.getElementById("myChart").getContext("2d");
     new Chart(ctx, {
         type: "pie",

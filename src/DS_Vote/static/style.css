@@ -1,3 +1,19 @@
+/**
+ * FILEPATH: /c:/Users/Administrator/Documents/Github/Distributed_Systems_Project/src/DS_Vote/static/style.css
+ * 
+ * This CSS file contains styling rules for the login, vote, and result pages of the DS_Vote application.
+ * 
+ * The styling includes:
+ * - Setting the font family, background color, and layout for the body element.
+ * - Styling the login form with a white background, padding, border radius, and box shadow.
+ * - Centering the heading and styling the input fields and submit button in the login form.
+ * - Styling the link for password recovery.
+ * - Styling the vote page with a centered layout, image, and form.
+ * - Styling the radio buttons and buttons in the vote form.
+ * - Styling the result page with a centered layout and chart container.
+ * 
+ * This CSS file is used to enhance the visual appearance and user experience of the DS_Vote application.
+ */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;

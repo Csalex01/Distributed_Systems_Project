@@ -1,3 +1,28 @@
+<!--
+    This is the base HTML template for the WG/BB Voting System.
+    It provides the basic structure and includes a CSS file for styling.
+
+    File Path: /c:/Users/Administrator/Documents/Github/Distributed_Systems_Project/src/DS_Vote/templates/base.html
+
+    Usage:
+    - This template is meant to be extended by other HTML templates.
+    - The content inside the {% block content %} {% endblock %} tags will be replaced by the content of the extending template.
+
+    Dependencies:
+    - style.css: This file should be located in the "../static/" directory relative to this template.
+
+    Example Usage:
+    ```
+    {% extends 'base.html' %}
+
+    {% block content %}
+        <h1>Welcome to WG/BB Voting System</h1>
+        <p>This is the home page.</p>
+    {% endblock %}
+    ```
+
+    Note: Make sure to update the file path in the FILEPATH comment to match the actual file path of this template.
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,12 +31,8 @@
         <title>WG/BB Voting System</title>
 
         <link rel="stylesheet" href="../static/style.css" />
-        
     </head>
     <body>
-        
         {% block content %}{% endblock %}
-
-        
     </body>
 </html>

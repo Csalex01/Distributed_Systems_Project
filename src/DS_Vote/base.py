@@ -8,4 +8,10 @@ base = Blueprint("base", __name__)
 
 @base.route("/")
 def index():
+    """
+    Renders the home page of the application.
+
+    Returns:
+        The rendered home page HTML template.
+    """
     return render_template("index/home.html")
